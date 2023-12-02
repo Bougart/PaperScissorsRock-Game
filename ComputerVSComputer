@@ -1,0 +1,65 @@
+import random
+computer_score = 0
+player_score = 0
+while player_score <= 100 and computer_score <= 100:
+    print("")
+    print("Player Score: " + str(player_score) + " | " + "Computer Score: " + str(computer_score) )
+    print("")
+    player_decision = ""
+    player_options = [
+        "Paper",
+        "Scissors",
+        "Rock",
+    ]
+    computer_decision = ""
+    computer_options = [
+        "Paper",
+        "Scissors",
+        "Rock",
+    ]
+    player_decision = random.choice(player_options)
+    computer_decision = random.choice(computer_options)
+    if player_decision == "Paper" and computer_decision == "Paper":
+        print("Player Picks: Paper")
+        print("Computer Picks: " + computer_decision)
+        print("Its a Draw!")
+    elif player_decision == "Paper" and computer_decision == "Scissors":
+        print("Player Picks: Paper")
+        print("Computer Picks: " + computer_decision)
+        print("Computer Wins!")
+        computer_score += 1
+    elif player_decision == "Paper" and computer_decision == "Rock":
+        print("Player Picks: Paper")
+        print("Computer Picks: " + computer_decision)
+        print("Player Wins!")
+        player_score += 1
+    elif player_decision == "Scissors" and computer_decision == "Paper":
+        print("Player Picks: Scissors")
+        print("Computer Picks: " + computer_decision)
+        print("Player Wins!")
+        player_score += 1
+    elif player_decision == "Scissors" and computer_decision == "Scissors":
+        print("Player Picks: Scissors")
+        print("Computer Picks: " + computer_decision)
+        print("Its a Draw!")
+    elif player_decision == "Scissors" and computer_decision == "Rock":
+        print("Player Picks: Scissors")
+        print("Computer Picks: " + computer_decision)
+        print("Computer Wins!")
+        computer_score += 1
+    elif player_decision == "Rock" and computer_decision == "Paper":
+        print("Player Picks: Rock")
+        print("Computer Picks: " + computer_decision)
+        print("Computer Wins!")
+        computer_score += 1
+    elif player_decision == "Rock" and computer_decision == "Scissors":
+        print("Player Picks: Rock")
+        print("Computer Picks: " + computer_decision)
+        print("Player Wins!")
+        player_score += 1
+    elif player_decision == "Rock" and computer_decision == "Rock":
+        print("Player Picks: Rock")
+        print("Computer Picks: " + computer_decision)
+        print("Its a Draw!")
+    else:
+        print("Test")
